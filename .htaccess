@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /~raymart/Laracasts/Laravel/PHP_practitioner/
+RewriteRule ^.*$ index.php [END]
+
+# Dont try to load a route with the given extensions
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt)$ [NC]
+
